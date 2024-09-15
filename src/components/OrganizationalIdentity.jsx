@@ -1,10 +1,10 @@
 const OrganizationalIdentity = () => {
     return (
-      <section className="p-8 bg-black text-white">
+      <section className="p-4 sm:p-8 bg-black text-white">
         <h2 className="text-2xl font-bold mb-4">2. Identidad Organizacional</h2>
         
-        <h3 className="font-bold ">Misión</h3>
-        <p className="p-2">
+        <h3 className="font-bold">Misión</h3>
+        <p className="p-2 text-sm sm:text-base">
           Nuestra misión es construir un equipo de clase mundial, el trabajo duro para satisfacer las altas 
           expectativas de una base de fans apasionados, crear los mejores juegos y entretenimiento e impulsar 
           la innovación técnica. A medida que continuamos hacia adelante, este enfoque y la renovada misión será 
@@ -12,18 +12,18 @@ const OrganizationalIdentity = () => {
         </p>
         
         <h3 className="font-bold mt-2">Visión</h3>
-        <p className="p-2">
+        <p className="p-2 text-sm sm:text-base">
           Nuestra visión es crear una tecnología innovadora que es accesible a todo el mundo y que se adapta a 
           las necesidades de cada persona. La tecnología accesible elimina las barreras para las personas con 
-          discapacidad y que permite a las personas para aprovechar al máximo de sus capacidades.
+          discapacidad y permite a las personas aprovechar al máximo sus capacidades.
         </p>
         
-        <h3 className="font-bold mt-2 ">Políticas</h3>
-        <p className="p-2">
+        <h3 className="font-bold mt-2">Políticas</h3>
+        <p className="p-2 text-sm sm:text-base">
           Xbox promueve un entorno inclusivo, accesible y seguro para todos los jugadores. Estas son algunas 
           de las políticas principales:
         </p>
-        <ul className="list-disc list-inside p-2">
+        <ul className="list-disc list-inside p-2 text-sm sm:text-base">
           <li>
             <strong>Comportamiento respetuoso:</strong> Los jugadores deben tratar a otros con respeto, evitando 
             el acoso y cualquier forma de discurso de odio. La competencia debe ser justa y divertida.
@@ -45,4 +45,5 @@ const OrganizationalIdentity = () => {
     );
   };
   
-  export default OrganizationalIdentity;  
+  export default OrganizationalIdentity;
+  

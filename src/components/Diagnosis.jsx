@@ -23,13 +23,13 @@ const Diagnosis = () => {
     ];
   
     return (
-      <section className="p-8 bg-black text-white">
+      <section className="p-4 sm:p-8 bg-black text-white">
         <h2 className="text-2xl font-bold mb-4">1. Diagnóstico Actual</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           {data.map((section) => (
-            <div key={section.id} className="border p-4 bg-[#2b525d]">
-              <h3 className="font-bold mb-2">{section.type}</h3>
-              <ul className="list-disc list-inside">
+            <div key={section.id} className="border p-4 bg-[#2b525d] rounded-lg">
+              <h3 className="font-bold mb-2 text-lg">{section.type}</h3>
+              <ul className="list-disc list-inside space-y-2">
                 {section.items.map((item) => (
                   <li key={item.id}>{item.description}</li>
                 ))}

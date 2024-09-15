@@ -5,7 +5,6 @@ import OrganizationalIdentity from './components/OrganizationalIdentity';
 import StrategicObjectives from './components/StrategicObjectives';
 import Footer from './components/Footer';
 
-import './App.css'
 
 const App = () => {
   const diagnosisData = [];

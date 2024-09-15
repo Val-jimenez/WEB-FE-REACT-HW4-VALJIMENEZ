@@ -15,35 +15,38 @@ const StrategicObjectives = () => {
     return (
       <section className="p-8 bg-black text-white">
         <h2 className="text-2xl font-bold mb-4">3. Objetivos Estratégicos</h2>
-        <table className="table-auto w-full border-collapse border">
-          <thead>
-            <tr>
-              <th className="border px-4 py-2">Código</th>
-              <th className="border px-4 py-2">Objetivo</th>
-              <th className="border px-4 py-2">Meta</th>
-              <th className="border px-4 py-2">Avance</th>
-              <th className="border px-4 py-2">Cumplimiento</th>
-              <th className="border px-4 py-2">Estado</th>
-            </tr>
-          </thead>
-          <tbody>
-            {objectives.map((obj) => (
-              <tr key={obj.id}>
-                <td className="border px-4 py-2">{obj.id}</td>
-                <td className="border px-4 py-2">{obj.goal}</td>
-                <td className="border px-4 py-2">{obj.target}</td>
-                <td className="border px-4 py-2">{obj.progress}</td>
-                <td className="border px-4 py-2">{obj.compliance}%</td>
-                <td className={`border px-4 py-2 ${getStatusColor(obj.compliance)}`}>
-                  {obj.compliance <= 35 ? 'Crítico' : obj.compliance <= 75 ? 'Aceptable' : 'Exitoso'}
-                </td>
+        <div className="overflow-x-auto">
+          <table className="min-w-full table-auto border-collapse border">
+            <thead>
+              <tr className="bg-gray-700">
+                <th className="border px-4 py-2">Código</th>
+                <th className="border px-4 py-2">Objetivo</th>
+                <th className="border px-4 py-2">Meta</th>
+                <th className="border px-4 py-2">Avance</th>
+                <th className="border px-4 py-2">Cumplimiento</th>
+                <th className="border px-4 py-2">Estado</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {objectives.map((obj) => (
+                <tr key={obj.id} className="bg-gray-800">
+                  <td className="border px-4 py-2">{obj.id}</td>
+                  <td className="border px-4 py-2">{obj.goal}</td>
+                  <td className="border px-4 py-2">{obj.target}</td>
+                  <td className="border px-4 py-2">{obj.progress}</td>
+                  <td className="border px-4 py-2">{obj.compliance}%</td>
+                  <td className={`border px-4 py-2 ${getStatusColor(obj.compliance)}`}>
+                    {obj.compliance <= 35 ? 'Crítico' : obj.compliance <= 75 ? 'Aceptable' : 'Exitoso'}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
     );
   };
   
   export default StrategicObjectives;
+  
   
